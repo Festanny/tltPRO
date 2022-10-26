@@ -810,6 +810,20 @@ section {
 .advantages .info-block-item {
   width: calc(100% - 330px);
 }
+.advantages {
+  position: relative;
+}
+.advantages::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 85px;
+  width: 100%;
+  height: 2000px;
+  background-image: url('../media/bg.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .info-block-item .item {
   position: relative;
   background-color: var(--bg);
@@ -1010,6 +1024,213 @@ section {
   display: flex;
   justify-content: flex-end;
 }
+.ourTeamBlock {
+  position: relative;
+}
+.ourTeamBlock::before {
+  content: '';
+  position: absolute;
+  width: 240px;
+  height: 160px;
+  background-image: url('../media/dron.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 0;
+  right: 12rem;
+}
+.ourTeam .underTitle {
+  margin-top: 55px;
+  font-size: 22px;
+  width: 50%;
+  color: var(--text)
+}
+.ourTeam .info-block {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, auto));
+  gap: 12px;
+  margin-top: 102px;
+}
+.ourTeam .info-block .item {
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0px 13px 24px rgba(0, 0, 0, 0.05);
+}
+.ourTeam .info-block .item img {
+  width: 100%;
+  height: 115px;
+  object-fit: cover;
+}
+.ourTeam .info-block .item .block h3 {
+  font-weight: bold;
+  font-size: 17px;
+  margin-bottom: 22px;
+}
+.ourTeam .info-block .item .block .textBlockOurTeam {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  color: var(--text);
+  font-size: 12px;
+}
+.ourTeam .info-block .item .block .textBlockOurTeam i {
+  font-size: 25px;
+}
+.ourTeam .info-block .item .block {
+  padding: 15px 20px;
+}
+.contactForm .title {
+  width: 100%;
+}
+.contactForm .underTitle {
+  color: var(--color);
+  font-size: 25px;
+  width: 50%;
+  margin: 10px 0 55px;
+}
+.contactForm .underTitle span {
+  font-weight: bold;
+}
+.contactForm form .widthBlock {
+  max-width: 60%;
+}
+.contactForm form {
+  color: var(--text);
+  padding: 70px;
+  background-color: var(--color4);
+  border-radius: 30px;
+  position: relative;
+}
+.contactForm form::before {
+  content: '';
+  position: absolute;
+  width: 242px;
+  height: 262px;
+  background-image: url('../media/obj.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: 70px;
+  top: 0;
+  transform: translateY(-40%);
+  z-index: 5;
+}
+.contactForm form .item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 60px;
+  position: relative;
+  z-index: 5;
+}
+.contactForm form .item .inputVal:nth-child(4) {
+  grid-column: 1/3;
+}
+.contactForm form .item .inputVal {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.contactForm form .item .inputVal label {
+  margin-bottom: 5px;
+}
+.contactForm form .item .inputVal input {
+  background-color: var(--color4);
+  border-bottom: 1px solid var(--color);
+  outline: 0;
+}
+.contactForm form .item .inputVal .btnFormSend button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 25px;
+  background-color: var(--color);
+  border-radius: 12px;
+  color: var(--white);
+  position: relative;
+  z-index: 5;
+}
+.contactForm form .item .inputVal .btnFormSend button .line {
+  width: 20px;
+  height: 2px;
+  background-color: var(--white);
+  margin-left: 10px;
+  position: relative;
+}
+.contactForm form .item .inputVal .btnFormSend button .line::before {
+  right: -12px;
+  top: -13px;
+  transform: rotate(45deg);
+  transform-origin: top left;
+}
+.contactForm form .item .inputVal .btnFormSend button .line::after {
+  right: 9px;
+  top: -9px;
+  transform: rotate(-45deg);
+  transform-origin: top right;
+}
+.contactForm form .item .inputVal .btnFormSend button .line::after,
+.contactForm form .item .inputVal .btnFormSend button .line::before {
+  content: '-';
+  position: absolute;
+  width: auto;
+  height: 2px;
+}
+.contactForm form .item .inputVal .btnFormSend {
+  position: relative;
+}
+.contactForm form .item .inputVal .btnFormSend img {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  transform: translate(50%, -50%);
+  width: 300px;
+  height: 120px;
+  object-fit: contain;
+  max-width: max-content;
+  z-index: -1;
+}
+footer .footer {
+  color: var(--text);
+  margin-bottom: 55px;
+}
+footer .footer .info-block,
+footer .footer .info-block .info-company,
+footer nav .info-block,
+footer nav .info-block .item.info-company {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+footer nav {
+  padding: 30px 0;
+}
+footer nav .item.logo img {
+  width: 62px;
+  height: 42px;
+  object-fit: contain;
+}
+footer nav .item.info-company .blockMenu {
+  display: flex;
+  gap: 40px;
+  color: var(--color2)
+}
+footer nav .item.info-company .soc {
+  display: flex;
+  gap: 25px;
+}
+footer nav .item.info-company .soc a {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+footer nav .item.info-company .soc a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+footer nav .info-block {
+  align-items: center;
+}
+
 
 
 
